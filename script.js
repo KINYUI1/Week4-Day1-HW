@@ -99,5 +99,27 @@ for(let i = 1; i <= 2; i++){
     timmy.exercise();
 }
 
+//Chef Make Dinners
 
+class Dinner{
+    constructor(appetizer,entree,dessert){
+        this.appetizer = appetizer;
+        this.entree = entree;
+        this.dessert = dessert;
+    }
+}
+class Chef{
 
+    makeDinner(appetizer,entree,dessert) {
+        const newDinner = new Dinner(appetizer,entree,dessert);
+        let dinners = [];
+        dinners.push(newDinner);
+        console.log(dinners);
+        //'aded Smashed Brussels Sprouts', 'Lasagna Soup', 'Chocolate Cookie Skillet '
+    }
+}
+
+const chef = new Chef();
+chef.makeDinner('aded Smashed Brussels Sprouts', 'Lasagna Soup', 'Chocolate Cookie Skillet ');
+chef.makeDinner('Pure Abundance Cashew Cheese', 'Schar Ciabatta Rolls', 'Chebe Focaccia Bread');
+chef.makeDinner('Zest Basil Pesto', 'Imagine Foods Sweet Potato Soup', 'Boulder Organic! Garden Minestrone Soup');
