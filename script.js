@@ -21,7 +21,6 @@ class Hamster{
 
 }
 
-const hamster = new Hamster('perry', 'lu', 67);
 
 //Person
 
@@ -42,6 +41,9 @@ class Person{
     getAge(){
         return this.age;
     }
+    setAge(age){
+        this.age = age;
+    }
     getWeight(){
         return this.weight;
     }
@@ -53,7 +55,7 @@ class Person{
         this.mood+=1;
     }
     exercise(){
-        this.weight-1;
+        this.weight-=1;
     }
     ageUp(){
         this.age++;
@@ -68,4 +70,34 @@ class Person{
         this.bankAccount-=(hamster.getPrice());
     }
 }
+
+//Create a Story with your Person class
+
+const timmy = new Person('Timmy');
+timmy.setAge(5);
+
+for(let i = 1; i <= 5; i++){
+    timmy.eat();
+}
+for(let i = 1; i <= 5; i++){
+    timmy.exercise();
+}
+
+timmy.setAge(9);
+
+const hamster = new Hamster('Timmy', 'Gus', 50);
+
+timmy.buyHamster(hamster);
+
+timmy.setAge(15);
+
+for(let i = 1; i <= 2; i++){
+    timmy.eat();
+}
+
+for(let i = 1; i <= 2; i++){
+    timmy.exercise();
+}
+
+
 
